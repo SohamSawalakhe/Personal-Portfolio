@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham Sawalakhe | Cyber-AI Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Electrolize&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+        :root {
+            --primary: #00f7ff;
+            --secondary: #0a0a2e;
+            --accent: #ff0062;
+            --neon-blue: #00a2ff;
+            --text: #f0f0f0;
+            --hologram: linear-gradient(45deg, var(--primary), var(--neon-blue), var(--accent));
+        }
+
+        body {
+            background: var(--secondary);
+            color: var(--text);
+            font-family: 'Electrolize', sans-serif;
+            overflow-x: hidden;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .jarvis-border {
+            position: relative;
+            background: rgba(10, 10, 46, 0.95);
+            border: 1px solid;
+            border-image: var(--hologram) 1;
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.2);
+            animation: border-glow 2s infinite alternate;
+        }
+
+        @keyframes border-glow {
+            0% { box-shadow: 0 0 10px var(--primary); }
+            100% { box-shadow: 0 0 30px var(--neon-blue); }
+        }
+
+        .hologram-text {
+            text-shadow: 0 0 10px var(--primary),
+                         0 0 20px var(--neon-blue);
+            color: var(--text);
+        }
+
+        .cyber-card {
+            background: rgba(10, 10, 46, 0.9);
+            border: 1px solid var(--primary);
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            animation: card-float 3s ease-in-out infinite;
+        }
+
+        @keyframes card-float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-node {
+            padding: 1.5rem;
+            background: rgba(0, 247, 255, 0.05);
+            border: 1px solid var(--primary);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            animation: skill-glide 1s ease-out;
+        }
+
+        @keyframes skill-glide {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        .jarvis-guide {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            background: rgba(10, 10, 46, 0.95);
+            border: 1px solid var(--primary);
+            border-radius: 10px;
+            padding: 15px;
+            z-index: 1000;
+            animation: guide-pulse 2s infinite;
+        }
+
+        @keyframes guide-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .timeline-node {
+            width: 20px;
+            height: 20px;
+            background: var(--secondary);
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            animation: node-pulse 1.5s infinite;
+        }
+
+        @keyframes node-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(0, 247, 255, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 247, 255, 0); }
+        }
+
+        .section-title {
+            position: relative;
+            padding-left: 1rem;
+            animation: title-slide 1s ease-out;
+        }
+
+        @keyframes title-slide {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        .badge-grow {
+            transition: all 0.3s ease;
+        }
+
+        .badge-grow:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="jarvis-guide hologram-text">
+        <div id="jarvis-message">System Initialized. Ready for Exploration.</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top jarvis-border">
+        <div class="container">
+            <a class="navbar-brand hologram-text" href="#">
+                <i class="fas fa-robot"></i> CYBER-AI CONSOLE
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link hologram-text" href="#about">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link hologram-text" href="#skills">SKILLS</a></li>
+                    <li class="nav-item"><a class="nav-link hologram-text" href="#projects">PROJECTS</a></li>
+                    <li class="nav-item"><a class="nav-link hologram-text" href="#experience">EXPERIENCE</a></li>
+                    <li class="nav-item"><a class="nav-link hologram-text" href="#achievements">ACHIEVEMENTS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 text-center">
+                    <h1 class="hologram-text display-1 mb-4" style="text-shadow: 0 0 30px var(--primary);">SOHAM SAWALAKHE</h1>
+                    <div class="typewriter">
+                        <p class="lead fs-2" style="color: var(--neon-blue)">AI/ML Developer & Cybersecurity Architect</p>
+                    </div>
+                    <div class="mt-5">
+                        <a href="#about" class="btn btn-outline-primary btn-lg mx-2">Explore System</a>
+                        <a href="#contact" class="btn btn-primary btn-lg mx-2">Direct Message</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 jarvis-border m-5">
+        <div class="container p-5">
+            <h2 class="section-title hologram-text">// SYSTEM PROFILE</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="lead" style="color: var(--neon-blue)">
+                        Cyber-AI Specialist with expertise in machine learning implementation and secure system architecture. 
+                        Proficient in full-stack development with focus on Python-based solutions and cybersecurity protocols. 
+                        Certified professional in Google Cybersecurity and AI implementation with proven track record in 
+                        developing high-efficiency algorithms and secure database systems.
+                    </p>
+                    <div class="timeline-beam mt-5 ps-4">
+                        <h4 class="hologram-text mb-4">EDUCATION MATRIX</h4>
+                        <div class="mb-4 position-relative">
+                            <div class="timeline-node"></div>
+                            <h5 style="color: var(--primary)">&nbsp;  &nbsp; B.Tech Computer Engineering</h5>
+                            <p style="color: var(--neon-blue)">Government College of Engineering Yavatmal | 8.09 CGPA | 2021-2025</p>
+                        </div>
+                        <div class="mb-4 position-relative">
+                            <div class="timeline-node"></div>
+                            <h5 style="color: var(--primary)"> &nbsp;  &nbsp;H.S.C.</h5>
+                            <p style="color: var(--neon-blue)">Bhartiya Mahavidyalaya | 84.83% | 2020-2021</p>
+                        </div>
+                        <div class="position-relative">
+                            <div class="timeline-node"></div>
+                            <h5 style="color: var(--primary)">&nbsp;  &nbsp;S.S.C.</h5>
+                            <p style="color: var(--neon-blue)">Dnyanmata High School | 77.60% | 2018-2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="section-title hologram-text">// SKILL MATRIX</h2>
+            <div class="skill-grid">
+                <!-- Programming Languages -->
+                <div class="skill-node">
+                    <h4 class="hologram-text"><i class="fas fa-code"></i> LANGUAGES</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>HTML5/CSS3</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="skill-node">
+                    <h4 class="hologram-text"><i class="fas fa-cube"></i> FRAMEWORKS</h4>
+                    <ul>
+                        <li>Django</li>
+                        <li>Flask</li>
+                        <li>React</li>
+                        <li>REST API</li>
+                        <li>Tkinter</li>
+                    </ul>
+                </div>
+
+                <!-- Data Analysis -->
+                <div class="skill-node">
+                    <h4 class="hologram-text"><i class="fas fa-chart-line"></i> DATA ANALYTICS</h4>
+                    <ul>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Matplotlib</li>
+                        <li>Seaborn</li>
+                        <li>Power BI</li>
+                    </ul>
+                </div>
+
+                <!-- AI/ML -->
+                <div class="skill-node">
+                    <h4 class="hologram-text"><i class="fas fa-brain"></i> AI/ML</h4>
+                    <ul>
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>Scikit-Learn</li>
+                        <li>NLP</li>
+                        <li>Computer Vision</li>
+                    </ul>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-node">
+                    <h4 class="hologram-text"><i class="fas fa-tools"></i> TOOLS</h4>
+                    <ul>
+                        <li>Git/GitHub</li>
+                        <li>AWS</li>
+                        <li>VS Code</li>
+                        <li>Linux</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 jarvis-border m-5">
+        <div class="container p-5">
+            <h2 class="section-title hologram-text">// ACTIVE OPERATIONS</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="cyber-card p-4">
+                        <h4 class="hologram-text">COVERT DATABASE DETECTION</h4>
+                        <div class="mb-3">
+                            <span class="badge badge-grow" style="background: var(--accent)">Security Level: 90%</span>
+                        </div>
+                        <ul>
+                            <li>Steganography Integration</li>
+                            <li>Cryptographic Security Layers</li>
+                            <li>ML Pattern Recognition</li>
+                            <li>Real-time Analytics Dashboard</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="cyber-card p-4">
+                        <h4 class="hologram-text">ANYSEARCH TOOL</h4>
+                        <div class="mb-3">
+                            <span class="badge badge-grow" style="background: var(--accent)">Efficiency: +60%</span>
+                        </div>
+                        <ul>
+                            <li>Custom Tokenization System</li>
+                            <li>Advanced Search Algorithms</li>
+                            <li>OOP Architecture</li>
+                            <li>Multi-threaded Processing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title hologram-text">// OPERATION HISTORY</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="cyber-card p-4">
+                        <h4 class="hologram-text">PYTHON DEVELOPMENT INTERN</h4>
+                        <h5 style="color: var(--neon-blue)">Motion Cut | Aug 2024 - Sep 2024</h5>
+                        <ul>
+                            <li>Developed Quiz Game with GUI Interface</li>
+                            <li>Created Advanced Word Counter System</li>
+                            <li>Designed Expense Tracker Application</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="cyber-card p-4">
+                        <h4 class="hologram-text">AI/ML INTERN</h4>
+                        <h5 style="color: var(--neon-blue)">YBI Foundation | Jul 2024 - Aug 2024</h5>
+                        <ul>
+                            <li>Clothing Review Prediction Model (85% Accuracy)</li>
+                            <li>Multinomial Naïve Bayes Implementation</li>
+                            <li>Advanced Data Processing Pipeline</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-5 jarvis-border m-5">
+        <div class="container p-5">
+            <h2 class="section-title hologram-text">// SYSTEM ACHIEVEMENTS</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="cyber-card p-4 text-center">
+                        <i class="fas fa-trophy fa-3x" style="color: var(--primary)"></i>
+                        <h5 class="mt-3">100+ Coding Solutions</h5>
+                        <p style="color: var(--neon-blue)">LeetCode & HackerRank</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="cyber-card p-4 text-center">
+                        <i class="fas fa-certificate fa-3x" style="color: var(--primary)"></i>
+                        <h5 class="mt-3">Professional Certifications</h5>
+                        <p style="color: var(--neon-blue)">Google, Cisco, AICTE</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="cyber-card p-4 text-center">
+                        <i class="fas fa-users fa-3x" style="color: var(--primary)"></i>
+                        <h5 class="mt-3">Leadership Experience</h5>
+                        <p style="color: var(--neon-blue)">60+ Students Managed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Particles.js Configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 70 },
+                color: { value: '#00f7ff' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5 },
+                size: { value: 1.5 },
+                move: {
+                    enable: true,
+                    speed: 1.2,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true
+                }
+            }
+        });
+
+        // Jarvis Guidance System
+        const sections = {
+            about: "Accessing Core Profile...",
+            skills: "Loading Skill Matrix...",
+            projects: "Initializing Project Database...",
+            experience: "Retrieving Mission Logs...",
+            achievements: "Decrypting Achievement Files..."
+        };
+
+        const jarvisMessage = document.getElementById('jarvis-message');
+        let currentSection = '';
+
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY + 100;
+            
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if(scrollPos >= sectionTop && scrollPos <= sectionTop + sectionHeight) {
+                    const sectionId = section.getAttribute('id');
+                    if(currentSection !== sectionId) {
+                        currentSection = sectionId;
+                        jarvisMessage.innerHTML = `<i class="fas fa-terminal"></i> ${sections[sectionId]}`;
+                        section.style.animation = 'section-highlight 1.5s ease-out';
+                        setTimeout(() => section.style.animation = '', 1500);
+                    }
+                }
+            });
+        });
+
+        // Typewriter Effect
+        document.addEventListener('DOMContentLoaded', function(){
+            const elements = document.getElementsByClassName('typewriter');
+            for(let element of elements) {
+                const text = element.innerHTML;
+                element.innerHTML = '';
+                let i = 0;
+                function typeWriter() {
+                    if (i < text.length) {
+                        element.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 50);
+                    }
+                }
+                typeWriter();
+            }
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
