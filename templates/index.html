@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soham Sawalakhe - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="glitch-text">SS</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <div class="profile-img">
+                <div class="profile-img-border"></div>
+                <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Soham Sawalakhe"
+                    class="profile-photo">
+            </div>
+            <h1 class="glitch-text">Soham Sawalakhe</h1>
+            <p class="typewriter">Computer Engineer | AI/ML Enthusiast | Web Developer</p>
+            <div class="tech-stack">
+                <i class="fab fa-python tech-icon" title="Python"></i>
+                <i class="fab fa-js tech-icon" title="JavaScript"></i>
+                <i class="fab fa-react tech-icon" title="React"></i>
+                <i class="fab fa-node tech-icon" title="Node.js"></i>
+                <i class="fas fa-database tech-icon" title="Databases"></i>
+                <i class="fab fa-aws tech-icon" title="AWS"></i>
+            </div>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">View Projects</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="highlight-text">Hello! I'm Soham, a passionate Computer Engineer based in Amravati,
+                    Maharashtra.</p>
+                <p>I specialize in building innovative solutions using cutting-edge technologies. With a strong
+                    foundation in Python and AI/ML, I love creating applications that make a difference. My journey in
+                    technology started with my fascination for problem-solving and has evolved into a deep passion for
+                    artificial intelligence and web development.</p>
+                <p>Currently pursuing my B.Tech in Computer Engineering, I've maintained a strong academic record while
+                    actively engaging in various technical projects and hackathons. My goal is to leverage technology to
+                    create impactful solutions that address real-world challenges.</p>
+                <div class="key-highlights">
+                    <h3>Key Highlights</h3>
+                    <ul class="highlights-list">
+                        <li><i class="fas fa-award"></i> Published research paper on "Covert Data Intelligence: Advance
+                            Hiding Techniques"</li>
+                        <li><i class="fas fa-trophy"></i> Participated in multiple technical hackathons</li>
+                        <li><i class="fas fa-laptop-code"></i> Developed various full-stack applications</li>
+                        <li><i class="fas fa-certificate"></i> Google Cybersecurity Professional Certificate holder</li>
+                        <li><i class="fas fa-network-wired"></i> Cisco Networking Academy verified Data Analytics
+                            Essential</li>
+                    </ul>
+                </div>
+                <div class="interests">
+                    <h3>Areas of Interest</h3>
+                    <ul class="interest-list">
+                        <li><i class="fas fa-brain"></i> Artificial Intelligence & Machine Learning</li>
+                        <li><i class="fas fa-code"></i> Full Stack Development</li>
+                        <li><i class="fas fa-shield-alt"></i> Cybersecurity</li>
+                        <li><i class="fas fa-database"></i> Data Science</li>
+                        <li><i class="fas fa-robot"></i> Deep Learning</li>
+                        <li><i class="fas fa-cloud"></i> Cloud Computing</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="education">
+                <h3>Education</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>B.Tech in Computer Engineering</h4>
+                            <p>Government College of Engineering, Yavatmal</p>
+                            <p class="timeline-date">2021 - 2025</p>
+                            <p class="timeline-grade">CGPA: 8.09</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Higher Secondary Certificate (HSC)</h4>
+                            <p>Bhartiya Mahavidyalaya, Amravati</p>
+                            <p class="timeline-date">2020 - 2021</p>
+                            <p class="timeline-grade">Percentage: 84.80%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-icons">
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                        <div class="skill-level" data-level="90"></div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-java"></i>
+                        <span>Java</span>
+                        <div class="skill-level" data-level="85"></div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                        <div class="skill-level" data-level="90"></div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                        <div class="skill-level" data-level="85"></div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                        <div class="skill-level" data-level="80"></div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>SQL</span>
+                        <div class="skill-level" data-level="75"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks & Tools</h3>
+                <div class="skill-icons">
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                        <div class="skill-level" data-level="85"></div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://static.djangoproject.com/img/logos/django-logo-negative.png" alt="Django">
+                        <span>Django</span>
+                        <div class="skill-level" data-level="80"></div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="data:image/png;base64,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"
+                            alt="Flask" class="skill-logo flask-logo">
+                        <span>Flask</span>
+                        <div class="skill-level" data-level="85"></div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                        <div class="skill-level" data-level="90"></div>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS</span>
+                        <div class="skill-level" data-level="75"></div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker"
+                            class="skill-logo">
+                        <span>Docker</span>
+                        <div class="skill-level" data-level="70"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>AI/ML & Data Science</h3>
+                <div class="skill-icons">
+                    <div class="skill-item">
+                        <img src="https://www.tensorflow.org/images/tf_logo_social.png" alt="TensorFlow">
+                        <span>TensorFlow</span>
+                        <div class="skill-level" data-level="80"></div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png"
+                            alt="Scikit-Learn">
+                        <span>Scikit-Learn</span>
+                        <div class="skill-level" data-level="85"></div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas">
+                        <span>Pandas</span>
+                        <div class="skill-level" data-level="90"></div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://numpy.org/images/logo.svg" alt="NumPy">
+                        <span>NumPy</span>
+                        <div class="skill-level" data-level="85"></div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://pytorch.org/assets/images/pytorch-logo.png" alt="PyTorch">
+                        <span>PyTorch</span>
+                        <div class="skill-level" data-level="75"></div>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://keras.io/img/logo.png" alt="Keras">
+                        <span>Keras</span>
+                        <div class="skill-level" data-level="80"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skills-particles" id="skills-particles"></div>
+    </section>
+
+    <section id="certificates" class="certificates">
+        <h2 class="section-title">Certifications & Badges</h2>
+
+        <div class="certificates-container">
+            <div class="cert-category technical-certs">
+                <h3>Technical Certifications</h3>
+                <div class="cert-carousel">
+                    <div class="cert-card">
+                        <div class="cert-inner">
+                            <div class="cert-front">
+                                <i class="fab fa-google"></i>
+                                <h4>Google Cybersecurity</h4>
+                                <p>Google</p>
+                            </div>
+                            <div class="cert-back">
+                                <p>Comprehensive training in cybersecurity fundamentals, security operations, and threat
+                                    analysis from Google's professional certification program.</p>
+                                <a href="{{ url_for('static', filename='images/techcert1.png') }}" class="btn-view"
+                                    target="_blank">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-inner">
+                            <div class="cert-front">
+                                <i class="fab fa-microsoft"></i>
+                                <h4>Generative AI Skills</h4>
+                                <p>Microsoft & LinkedIn</p>
+                            </div>
+                            <div class="cert-back">
+                                <p>Advanced training in Generative AI technologies and their practical applications,
+                                    certified by Microsoft and LinkedIn Learning.</p>
+                                <a href="{{ url_for('static', filename='images/techcert2.png') }}" class="btn-view"
+                                    target="_blank">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-inner">
+                            <div class="cert-front">
+                                <i class="fab fa-python"></i>
+                                <h4>Python Development</h4>
+                                <p>Professional Certification</p>
+                            </div>
+                            <div class="cert-back">
+                                <p>Expert-level certification in Python programming, covering advanced concepts and
+                                    practical application development.</p>
+                                <a href="{{ url_for('static', filename='images/techcert3.png') }}" class="btn-view"
+                                    target="_blank">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-category soft-skills">
+                <h3>Professional Skills</h3>
+                <div class="cert-carousel">
+                    <div class="cert-card">
+                        <div class="cert-inner">
+                            <div class="cert-front">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h4>Soft Skill Development</h4>
+                                <p>NPTEL Certification</p>
+                            </div>
+                            <div class="cert-back">
+                                <p>Comprehensive training in professional communication, leadership, and interpersonal
+                                    skills through NPTEL's certification program.</p>
+                                <a href="{{ url_for('static', filename='images/softskill1.png') }}" class="btn-view"
+                                    target="_blank">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-inner">
+                            <div class="cert-front">
+                                <i class="fas fa-users"></i>
+                                <h4>Professional Development</h4>
+                                <p>NPTEL Certification</p>
+                            </div>
+                            <div class="cert-back">
+                                <p>Advanced training in professional development, workplace ethics, and career
+                                    advancement strategies.</p>
+                                <a href="{{ url_for('static', filename='images/softskill2.png') }}" class="btn-view"
+                                    target="_blank">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="badges-section">
+                <h3>Achievement Badges</h3>
+                <div class="badges-grid">
+                    <div class="badge-item" data-badge="Google Cybersecurity">
+                        <img src="{{ url_for('static', filename='images/badge1.png') }}"
+                            alt="Google Cybersecurity Badge">
+                        <span>Cybersecurity Professional</span>
+                    </div>
+                    <div class="badge-item" data-badge="Cisco Networking">
+                        <img src="{{ url_for('static', filename='images/badge2.png') }}" alt="Cisco Networking Badge">
+                        <span>Data Analytics Essential</span>
+                    </div>
+                    <div class="badge-item" data-badge="IBM SkillsBuild">
+                        <img src="{{ url_for('static', filename='images/badge3.png') }}" alt="IBM Cybersecurity Badge">
+                        <span>Cybersecurity Fundamentals</span>
+                    </div>
+                    <div class="badge-item" data-badge="Google AI">
+                        <img src="{{ url_for('static', filename='images/badge4.png') }}" alt="Google AI Badge">
+                        <span>AI Essentials</span>
+                    </div>
+                    <div class="badge-item" data-badge="Google Cloud">
+                        <img src="{{ url_for('static', filename='images/badge5.png') }}" alt="Google Cloud Badge">
+                        <span>Cloud Computing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Covert Database Detection</h3>
+                <p>A sophisticated desktop application using Python and Tkinter for detecting hidden databases with
+                    integrated ML algorithms.</p>
+                <div class="project-tech">Python, Steganography, ML</div>
+            </div>
+            <div class="project-card">
+                <h3>Any Search Tool</h3>
+                <p>Desktop application for easy file access with real-time search operations and user-friendly design.
+                </p>
+                <div class="project-tech">Python, GUI Development</div>
+            </div>
+            <div class="project-card">
+                <h3>Library Management System</h3>
+                <p>Full-stack Django web application with REST API implementation and MySQL database.</p>
+                <div class="project-tech">Django, REST API, MySQL</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <div class="contact-text">
+                <p>I'm currently looking for new opportunities and my inbox is always open. Whether you have a question,
+                    a project idea, or just want to say hi, I'll try my best to get back to you!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <a href="mailto:sohamsawalakhe@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <span>sohamsawalakhe@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/soham-sawalakhe-90306627f/" class="contact-item"
+                        target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <span>Connect with me</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/SohamSawalakhe" class="contact-item" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <span>Check out my repos</span>
+                        </div>
+                    </a>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <span>Amravati, Maharashtra</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Soham Sawalakhe. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
